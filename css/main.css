@@ -1,0 +1,317 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+KR:wght@300;400;500&display=swap');
+@import url('https://fonts.cdnfonts.com/css/samsungone');
+
+@keyframes bubble {
+  0% {
+    transform: translateY(-8px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(-8px);
+  }
+}
+@keyframes bubble2 {
+  100% {
+    transform: translateY(-8px);
+  }
+}
+
+/* -1. Common */
+
+html {
+  position: relative;
+  font-family: 'Montserrat','SamsungOne','Samsung Sharp Sans', arial, sans-serif;
+  font-weight: normal;
+}
+button {
+  outline: none;
+
+}
+/* 00. Header */
+
+#gnb {
+  position: fixed;
+  width: 100%;
+  display: flex !important;
+  justify-content: space-between;
+  transition: 0.3s;
+  z-index: 2;
+}
+#gnb:hover {
+  background: #fff;
+  transition: 0.3s;
+}
+#logo a {
+  display: inline-block;
+  width: 300px; height: 100px;
+}
+#logo img {
+  position: relative;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  width: 160px; height: 50px;
+}
+#menu {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  width: 1200px; height: 100px;
+  margin: 0 auto;
+  z-index: 2;
+}
+#menu > li {
+  line-height: 100px;
+  cursor: pointer;
+}
+#menu_sub {
+  position: relative;
+  top: 0; right: 0;
+  width: 300px; height: 100px;
+}
+#menu_sub li {
+  display: flex;
+  height: 100px;
+  line-height: 115px;
+  margin-left: 100px;
+}
+#menu_sub img {
+  display: inline-block;
+  width: 30px; height: 30px;
+  margin-right: 20px;
+}
+
+/* 00-1. Main */
+.top {
+  display: none;
+  width: 60px; height: 60px;
+  position: fixed;
+  bottom: 40px; right: 120px;
+  line-height: 60px;
+  z-index: 2;
+  text-align: center;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #333;
+  border-radius: 50%;
+  font-size: 40px;
+  cursor: pointer;
+  transition: 0.5s; 
+}
+
+.top:hover {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+/* 01. Section 1 */
+
+.section1 {
+  width: 100%; height: 100vh;
+  background-color: #f4f4f4;
+  background-image: url(../images/galaxy-z-flip5-highlights-kv-a.jpg);
+  background-repeat: no-repeat;
+  /* background-size: 50%; */
+  background-position: 75% 40%;
+}
+.inner-box {
+  font-family: 'Montserrat', 'SamsungOne' !important;
+  position: relative;
+  width: 1200px; height: 100%;
+  /* background: rgba(0,0,0,0.2); */
+  margin: 0 auto;
+}
+.section1 .inner-box h2 {
+  font-size: 96px;
+  padding-top: 200px;
+  font-weight: normal;
+  color: #fff;
+  background: #000;
+  mix-blend-mode:difference
+}
+.section1 .inner-box p {
+  padding-top: 30px;
+  font-weight: 200;
+  line-height: 25px;
+  color: #fff;
+  background: #000;
+  mix-blend-mode:difference;
+}
+.scroll_btn {
+  width: 60px; height: 60px;
+  position: absolute;
+  text-align: center;
+  line-height: 60px;
+  left: 50%; bottom: 20px;
+  border: 1px solid #333;
+  color: #333;
+  border-radius: 30px;
+  font-size: 40px;
+  transform: perspective(4px) translateZ(0);
+  cursor: pointer;
+}
+.bubble {
+  animation-name: bubble2, bubble;
+  animation-duration: 0.3s, 1.5s;
+  animation-delay: 0s, 0.3s;
+  animation-timing-function: ease-out, ease-in-out;
+  animation-iteration-count: 1, infinite;
+  animation-fill-mode: forwards;
+  animation-direction: normal, alternate;
+}
+
+/* 02. Section 2 */
+
+.section2 {
+  position: relative;
+  width: 100%; height: 100vh;
+  background: #f4f4f4;
+}
+.section2 .inner-box h2 {
+  padding-top: 60px;
+  font-size: 48px;
+  font-weight: normal;
+}
+.section2 .inner-box p:nth-child(2) {
+  margin-top: 20px;
+}
+.accordion {
+  display: flex;
+  width: 1200px; height: 438px;
+  margin: 60px auto 0px auto;
+}
+.accordion li {
+  width: 900px; height: 100%;
+  display: flex;
+}
+.accordion .acc_con1 {
+  background-color: rgba(0,0,0,0.2);
+  width: 100px; height: 438px;
+  cursor: pointer;
+}
+.acc1 {background-image: url(../images/mint.svg);}
+.acc2 {background-image: url(../images/graphite.svg);}
+.acc3 {background-image: url(../images/cream.svg);}
+.acc4 {background-image: url(../images/lavender.svg);}
+
+.accordion .acc_con2 {
+  display: flex;
+  width: 0px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.slide {width: 800px !important;}
+
+.accordion .acc_con2 .sec_img {
+  width: 400px; height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: -50px;
+}
+.sec1 {background-image: url(../images/galaxy-z-flip5-highlights-colors-mint-front-tb.jpg);}
+.sec2 {background-image: url(../images/galaxy-z-flip5-highlights-colors-graphite-front-tb.jpg);}
+.sec3 {background-image: url(../images/galaxy-z-flip5-highlights-colors-cream-front-tb.jpg);}
+.sec4 {background-image: url(../images/galaxy-z-flip5-highlights-colors-lavender-front-tb.jpg);}
+
+.section2 .inner-box .thumb {
+  width: 1200px;
+  display: flex;
+  margin: 40px auto 0px auto;
+}
+.section2 .inner-box .thumb li {
+  width: 270px; height: 100px;
+  margin-right: 40px;
+  overflow: hidden;
+}
+.section2 .inner-box .thumb li:last-child {
+  margin-right: 0;
+}
+.section2 .inner-box .thumb li img {
+  width: 270px;
+  transform: translateY(-20%);
+  filter: brightness(0.3);
+  transition: 0.3s;
+}
+.on {
+  overflow: hidden;
+}
+.on img {
+  transform: translateY(-18%) !important;
+  filter: brightness(1) !important;
+  scale: 1.2;
+}
+
+/* 03. Section 3 */
+
+.section3 {
+  position: relative;
+  width: 100%; height: 100vh;
+}
+.section3 .inner-box {
+  text-align: center;
+}
+.section3 .inner-box h2 {
+  padding-top: 60px;
+  font-size: 48px;
+  font-weight: normal;
+  text-align: center;
+}
+.section3 .inner-box p:nth-child(2) {
+  margin-top: 20px;
+}
+.tab-menu {
+  margin-top: 40px;
+  width: 1200px; height: 650px;
+}
+.tab_btn {
+  background-color: #ccc;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  line-height: 100px;
+  font-size: 17px;
+  width: 50%;
+  transition: 0.3s;
+}
+.tab_btn:hover {
+  background-color: #aaa;
+  color: #fff;
+}
+.tab_con {
+  display: none;
+  height: 100%;
+  transition: 0.5s;
+}
+
+/* 04. Section 4 */
+
+.section4 {
+  position: relative;
+  width: 100%; height: 98vh;
+  background: #000;
+}
+.section4 img {
+  position: absolute;
+  display: block;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 05. Footer */
+
+footer {
+  position: relative;
+  width: 100%; height: 270px;
+}
+.termsNadd {
+  width: 1200px; height: 270px;
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure,  footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+/* 줄간격은 100%로 기본설정 */
+body {
+  line-height:1;
+}
+
+/* 이전 브라우저에서 html5 시멘틱구조 태그가 잘 인식되도록 블럭요소로 설정해줌*/
+article,aside,details,figcaption,figure, footer,header,hgroup,menu,nav,section { 
+  display:block;
+}
+
+/* 목록태그요소에 기호를 숨김 */
+ol, ul, li {list-style:none;}
+
+/* 인용문태그 사용 시, 기호를 나오지 않게 함 */
+blockquote, q {quotes:none;}
+blockquote:before, blockquote:after, q:before, q:after {
+  content:'';
+  content:none;
+}
+
+/* 링크관련 태그 기본서식 */
+a {
+  text-decoration: none;
+  color:#000;
+  margin:0;
+  padding:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+/* 수정, 삽입한 내용이 있는 경우 사용하는 태그로서 기본색상을 지정한다. */
+ins {
+  background-color:#ff9;
+  color:#000;
+  text-decoration:none;
+}
+
+/* 중요한 내용을 표시하고자 할 때 사용하는 태그 */
+mark {
+  background-color:#ff9;
+  color:#000; 
+  font-style:italic;
+  font-weight:bold;
+}
+del {text-decoration: line-through;}
+abbr[title], dfn[title] {
+  border-bottom:1px dotted;
+  cursor:help;
+}
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display:block;
+  height:1px;
+  border:0; 
+  border-top:1px solid #cccccc;
+  margin:1em 0;
+  padding:0;
+}
+input, select {
+  vertical-align:middle;
+}
